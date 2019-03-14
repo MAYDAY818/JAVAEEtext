@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>securityprj</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- security-constriaint元素是用来指示服务器使用何种验证方法 -->
+  <security-constraint>
+    <web-resource-collection><!-- web-resource-collection子元素用于设置受保护的资源 -->
+      <web-resource-name>protected Resource</web-resource-name>
+      <url-pattern>/BasicVe	rify/*</url-pattern>
+      <url-pattern>/SecurityServlet/*</url-pattern><!--  受保护资源的配置 -->
+      <http-method>POST</http-method>
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint><!-- auth-constraint子元素定义哪些角色具有访问受保护资源的权限 -->
+      <role-name>role1</role-name><!-- 设置允许访问资源的角色名 -->
+      <role-name>manager</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <!-- login-config元素用来指定服务器使用何种认证机制,即用来定义认证机制。此元素在web.xml中应放在security-constraint 的紧后面。其子元素auth-method用于设置认证机制的类型。 -->
+ <login-config>
+  <!--  
+  	<auth-method>BASIC</auth-method>
+  	<realm-name>Default</realm-name>
+  -->
+
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/formlogin.html</form-login-page>
+      <form-error-page>/formerror.html</form-error-page>
+    </form-login-config>
+
+  <!-- form-login-config元素用于设定表单认证的登录页面和错误页面 -->
+  </login-config>
+</web-app>

@@ -1,0 +1,28 @@
+package ui;
+
+import org.hibernate.Session;
+import org.hibernate.Transaction;
+
+import entity.Customer;
+import util.Hibernate;
+
+public class Text {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		Session session = Hibernate.openSession();
+		// 开始一次事务
+		Transaction tx = session.beginTransaction(); 
+
+		// 创建需要持久化的对象 
+		Customer c1 = new Customer(1,"aaa",1);
+		session.save(c1); // 将对象持久化
+		tx.commit();      // 提交事务
+		session.close();  // 关闭会话
+
+
+	}
+
+}

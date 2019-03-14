@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;database.java&apos; to &apos;jsoup4/src/dao&apos;&#x0D;&#x0A;- Original project: &apos;mysqltest7&apos;&#x0D;&#x0A;- Destination element: &apos;jsoup4/src/dao&apos;&#x0D;&#x0A;- Original element: &apos;dao.database.java&apos;" description="Copy compilation unit" destination="=jsoup4/src&lt;dao" element1="/src&lt;dao{database.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1545724402337" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+	<!--数据库方言-->
+	  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+	  <!-- 数据库驱动 -->
+	  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+	  <!-- 数据库链接地址 -->
+	  <property name="hibernate.connection.url">jdbc:mysql://120.79.80.250:3306/hibernate</property>
+	  <!-- 数据库名称 -->
+	  <property name="hibernate.connection.username">hibernate</property>
+	  <!-- 数据库密码 -->
+	  <property name="hibernate.connection.password">ZzanKje6484iBAHp</property>
+	  <!-- 编码方式 -->
+	  <property name="hibernate.connection.characterEncoding">utf-8</property>
+	  <!-- 打印sql语句 -->
+	  <property name="hibernate.show_sql">true</property>
+	  <!-- 格式化sql输出语句 -->
+	  <property name="hibernate.format_sql">true</property>
+	  <!-- 添加映射配置文件 -->
+	  <mapping resource="entity/Customer.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>
